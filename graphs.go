@@ -11,7 +11,7 @@ type Queue struct {
 // NewQueue возвращает экземпляр очереди
 func NewQueue() *Queue {
 	q := Queue{
-		People:  []Person{},
+		People:  make([]Person, 0, 100),
 		Checked: map[string]struct{}{},
 	}
 	return &q
